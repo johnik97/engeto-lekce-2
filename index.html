@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Bonusový úkol</title>
+  </head>
+  <body>
+    <div class="product-container">
+      <span class="free-shipping-badge">Doprava zdarma</span>
+      <span class="product-of-the-year-badge">Sluchátka roku 2023</span>
+      <span class="discount-badge">-20%</span>
+      <div class="product-image-container">
+        <img
+          src="https://image.alza.cz/products/MON302m78/MON302m78.jpg?width=500&height=500"
+          alt="Beats sluchátka Bílá"
+          id="product-image-white"
+          class="product-image"
+        />
+        <img
+          src="https://image.alza.cz/products/MON302m76/MON302m76.jpg?width=500&height=500"
+          alt="Beats sluchátka Černá"
+          id="product-image-black"
+          class="product-image"
+        />
+      </div>
+      <h1 class="product-title">Beats Studio3 Wireless</h1>
+      <div class="rating-container">
+        <div class="rating-star-container">
+          <img
+            src="https://cdn.alza.cz/Styles/images/svg/star-full.svg"
+            alt="Star"
+          />
+          <span class="rating-value">4,8</span>
+          <span class="rating-users">216 hodnocení</span>
+        </div>
+        <p class="product-description">
+          Bezdrátová sluchátka - s mikrofonem, přes hlavu, okolo uší, aktivní
+          potlačení hluku (ANC), uzavřená konstrukce, 3,5 mm Jack, Bluetooth
+          4.0, Ambient sound, hlasový asistent, přepínání skladeb, přijímání
+          hovorů, s ovládáním hlasitosti, odnímatelný kabel 1,2 m, výdrž baterie
+          až 40 h
+        </p>
+        <div class="product-variant-wrapper">
+          <span class="product-variant-title">Varianta</span>
+        </div>
+        <div class="product-variant-group">
+          <input
+            type="radio"
+            name="color"
+            id="white"
+            class="product-variant-radio"
+            checked
+          />
+          <img
+            class="product-variant-label"
+            src="https://cdn.alza.cz/Foto/ImgGalery/Ikony/parametry/barva/ico-white.png"
+            alt="Bílá"
+          />
+          <input
+            type="radio"
+            name="color"
+            id="black"
+            class="product-variant-radio"
+          />
+          <img
+            class="product-variant-label"
+            src="https://cdn.alza.cz/Foto/ImgGalery/Ikony/parametry/barva/ico-black.png"
+            alt="Černá"
+          />
+        </div>
+      </div>
+      <div class="product-availability-wrapper">
+        <span class="product-availability-label">Skladem > 5ks</span>
+      </div>
+      <div class="product-price-order-container">
+        <div class="product-price-action-disclaimer">
+          <span class="product-price-action-disclaimer-label">
+            Super cena
+          </span>
+        </div>
+        <div class="product-price-wrapper">
+          <span class="product-price-value">4 990,-</span>
+        </div>
+        <div class="product-discount-wrapper">
+          <span class="product-discount">Ušetříte 1 250,-</span>
+        </div>
+        <div class="product-tax-free">
+          <span class="product-tax-free-label">bez DPH 3 942,-</span>
+        </div>
+      </div>
+      <div class="product-add-to-cart-wrapper">
+        <span class="product-add-to-cart">Do košíku</span>
+      </div>
+    </div>
+
+    <script>
+      const whiteRadio = document.getElementById("white");
+      const blackRadio = document.getElementById("black");
+      const whiteImage = document.getElementById("product-image-white");
+      const blackImage = document.getElementById("product-image-black");
+
+      whiteRadio.addEventListener("change", () => {
+        whiteImage.style.display = "block";
+        blackImage.style.display = "none";
+      });
+
+      blackRadio.addEventListener("change", () => {
+        whiteImage.style.display = "none";
+        blackImage.style.display = "block";
+      });
+
+      window.addEventListener("load", () => {
+        whiteRadio.checked = true;
+        whiteImage.style.display = "block";
+        blackImage.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
